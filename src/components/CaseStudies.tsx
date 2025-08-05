@@ -2,7 +2,7 @@
 import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import { ArrowRight } from "lucide-react";
-import { ArrowUpRightIcon } from "@heroicons/react/24/outline";
+import Image from "next/image";
 
 const cases = [
   {
@@ -20,13 +20,13 @@ const cases = [
   {
     name: "Nova Threads",
     image:
-      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80",
+      "https://images.unsplash.com/photo-1629131726692-1accd0c53ce0?q=80&w=1170&auto=format&fit=crop&w=400&q=80",
     tags: ["Crypto", "Web app"],
   },
   {
     name: "CloudDash",
     image:
-      "https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80",
+      "https://images.unsplash.com/photo-1499673610122-01c7122c5dcb?q=80&w=1027&auto=format&fit=crop&w=400&q=80",
     tags: ["Finance", "Web3"],
   },
 ];
@@ -155,7 +155,7 @@ export default function CaseStudies() {
         </h2>
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4 sm:gap-0 mb-4 px-4">
           <p className="flex-1 text-left md:max-w-2/5 text-black pb-4 sm:pb-0">
-            See how I've helped clients turn ambitious ideas into successful
+            See how I&apos;ve helped clients turn ambitious ideas into successful
             digital products.
           </p>
           <button className="rounded-full bg-white text-black p-2 px-6 shadow hover:bg-black hover:text-white hover:cursor-pointer transition-colors whitespace-nowrap flex flex-row">
@@ -174,11 +174,15 @@ export default function CaseStudies() {
             transition={{ delay: i * 0.1, duration: 0.7 }}
           >
             <div className="relative w-full aspect-[4/3] mb-4 rounded-xl overflow-hidden shadow">
-              <img
+              <Image
                 src={c.image}
                 alt={c.name}
-                className="absolute inset-0 w-full h-full object-cover"
-                loading="lazy"
+                width={768}
+                height={576}
+                className="object-cover"
+                style={{ position: 'absolute' }}
+                sizes="(max-width: 768px) 100vw, 50vw"
+                priority={false}
               />
             </div>
             <div className="flex flex-row gap-2 mb-2">
@@ -208,7 +212,7 @@ export default function CaseStudies() {
               Who We Are Crafting Our Success
             </h2>
             <p className="mb-8">
-              I offer high-quality development services to elevate your brand's
+              I offer high-quality development services to elevate your brand`&apos;`s
               presence and make a lasting impression. Partner with us for
               impactful, user-focused solutions that bring your vision to life.
             </p>
@@ -232,9 +236,11 @@ export default function CaseStudies() {
             </div>
           </div>
           <div className="flex-1 flex justify-center items-center w-full lg:mt-50">
-            <img
+            <Image
               src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=600&q=80"
               alt="Case Study"
+              width={400}
+              height={300}
               className="w-full max-w-md h-auto rounded-lg shadow-md"
             />
           </div>
@@ -280,14 +286,14 @@ export default function CaseStudies() {
                 Increased conversion rate by 400%
               </p>
               <p className="italic mb-4 text-gray-700">
-                "We needed a high-converting website, and Samuel delivered his
-                expertise skills and helped us increase our conversion rate."
+                &quot;We needed a high-converting website, and Samuel delivered his
+                expertise skills and helped us increase our conversion rate.&quot;
               </p>
               <p className="font-medium text-right text-gray-600">Name</p>
             </div>
             <div className="flex-1 max-w-md bg-black text-white rounded-2xl p-6 border border-gray-900 shadow-lg flex flex-col justify-between min-w-[260px]">
               <p className="font-semibold text-lg mb-2">
-                Can't decide? Let's talk
+                Can&apos;t decide? Let&apos;s talk
               </p>
               <p className="mb-4 text-gray-200">
                 Strategic web design, SEO-driven content, and paid ad campaigns
@@ -305,7 +311,7 @@ export default function CaseStudies() {
           What Our Clients are Saying
         </h2>
         <p className="text-center md:text-start md:max-w-md pb-12 text-gray-600 font-semibold italic">
-          Our clients' success stories are at the heart of what we do. Each
+          Our clients&apos; success stories are at the heart of what we do. Each
           project is a partnership, and seeing the impact of our work through
           their words is our greatest reward.
         </p>
@@ -356,7 +362,7 @@ export default function CaseStudies() {
         {/* Can't find your answer card - only on large screens */}
         <div className="hidden lg:block absolute bottom-4 left-4 w-[380px]">
           <div className="bg-white rounded-2xl shadow-xl p-6 flex flex-col gap-4 border border-gray-100">
-            <div className="font-bold text-lg mb-1">Can't find your answer?</div>
+            <div className="font-bold text-lg mb-1">Cant find your answer?</div>
             <div className="text-gray-600 mb-4">Get in touch with our support team, they are friendly!</div>
             <a
               href="#contact"

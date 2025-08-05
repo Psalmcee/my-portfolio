@@ -9,13 +9,13 @@ export default function about() {
       <section className="max-w-3xl w-full mb-16">
         <h1 className="text-4xl font-bold mb-4 font-space">About Me</h1>
         <p className="text-lg mb-6 text-gray-700">
-          Hi, I'm Samuel Obidi, a passionate developer and digital strategist dedicated to helping businesses grow through creative, high-quality web solutions. With over 5 years of experience in the industry, I specialize in building modern, scalable, and user-focused products that drive real results. My approach combines technical expertise, design thinking, and a deep understanding of business needs to deliver impactful digital experiences.
+          Hi, I&apos;m Samuel Obidi, a passionate developer and digital strategist dedicated to helping businesses grow through creative, high-quality web solutions. With over 5 years of experience in the industry, I specialize in building modern, scalable, and user-focused products that drive real results. My approach combines technical expertise, design thinking, and a deep understanding of business needs to deliver impactful digital experiences.
         </p>
         <p className="text-lg mb-6 text-gray-700">
           I have worked with startups, agencies, and established companies, delivering projects ranging from SaaS platforms and e-commerce sites to marketing websites and custom web applications. My mission is to empower brands to reach their full potential online by crafting solutions that are not only beautiful but also effective and easy to use.
         </p>
         <p className="text-lg mb-6 text-gray-700">
-          When I'm not coding, you can find me exploring new technologies, mentoring aspiring developers, or collaborating with creative teams to solve complex challenges. Let's connect and see how I can help elevate your business!
+          When I&apos;m not coding, you can find me exploring new technologies, mentoring aspiring developers, or collaborating with creative teams to solve complex challenges. Let&apos;s connect and see how I can help elevate your business!
         </p>
       </section>
       <section className="max-w-3xl w-full bg-gray-50 rounded-2xl shadow p-8 flex flex-col gap-4 border border-gray-100">

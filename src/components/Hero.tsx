@@ -1,7 +1,7 @@
 "use client";
 import { motion } from 'framer-motion';
 import Navbar from './Navbar';
-import { ChevronDown, Github, Linkedin, Mail } from 'lucide-react';
+import { ChevronDown } from 'lucide-react';
 
 export default function Hero() {
   return (
