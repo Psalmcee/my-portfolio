@@ -33,8 +33,8 @@ const cases = [
 
 const stats = [
   { label: "Years in the development industry", value: "5+" },
-  { label: "Clients", value: "10+" },
-  { label: "Satisfaction rate", value: "90%" },
+  { label: "Countries rendered development services", value: "10+" },
+  { label: "Satisfaction rate", value: "100%" },
   { label: "Team size", value: "8+" },
 ];
 
@@ -89,18 +89,18 @@ const testimonials = [
   {
     name: "Savannah Nguyen",
     role: "Marketing Director, Cloud Rush",
-    quote: "Working with SamuCloud was a game-changer for our business.",
+    quote: "Working with Samuel was a game-changer for our business.",
   },
   {
     name: "Arlene McCoy",
     role: "CEO, Vertex Labs",
     quote:
-      "SamuCloud’s attention to detail and innovative approach exceeded our expectations.",
+      "Samuel's attention to detail and innovative approach exceeded our expectations.",
   },
   {
     name: "Theresa Webb",
     role: "Founder, CloudDash",
-    quote: "Working with SamuCloud was a game-changer for our business.",
+    quote: "Working with Samuel was a game-changer for our business.",
   },
 ];
 
@@ -167,7 +167,7 @@ export default function CaseStudies() {
         {cases.map((c, i) => (
           <motion.div
             key={i}
-            className="bg-gray-100 rounded-2xl p-4 flex flex-col items-start shadow-md hover:shadow-xl transition-shadow mx-2"
+            className="bg-gray-100 rounded-2xl p-2 flex flex-col items-start shadow-md hover:shadow-xl transition-shadow mx-2"
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -196,12 +196,14 @@ export default function CaseStudies() {
                   </span>
                 ))}
             </div>
-            <span className="font-semibold text-lg mb-2 text-black">
+            <div className="flex flex-row w-full justify-between px-2">
+              <span className="font-semibold text-lg mb-2 text-black">
               {c.name}
-            </span>
-            <button className="ml-auto mt-auto bg-white border border-gray-200 rounded-full p-2 flex items-center justify-center shadow hover:bg-gray-100 transition-all">
-              <ArrowRight size={18} className="text-gray-700" />
-            </button>
+              </span>
+              <button className="mt-auto group bg-white border border-gray-200 rounded-full p-2 flex items-center justify-center shadow hover:bg-gray-500 transition-all">
+                <ArrowRight size={18} className="text-gray-700 group-hover:text-white" />
+              </button>
+            </div>
           </motion.div>
         ))}
       </div>
@@ -257,7 +259,7 @@ export default function CaseStudies() {
           timeline.
         </p>
         <div className="rounded-xl shadow pb-6">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 p-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 p-4">
             {plans.map((p, i) => (
               <div
                 key={i}
@@ -280,7 +282,7 @@ export default function CaseStudies() {
               </div>
             ))}
           </div>
-          <div className="flex flex-col md:flex-row gap-6 md:gap-8 justify-center items-stretch mx-6 mt-8">
+          <div className="flex flex-col md:flex-row gap-6 md:gap-8 items-stretch mx-6 mt-8">
             <div className="flex-1 max-w-md bg-white text-gray-900 rounded-2xl p-6 border border-gray-200 shadow-lg flex flex-col justify-between min-w-[260px]">
               <p className="font-semibold text-lg mb-2">
                 Increased conversion rate by 400%
@@ -381,11 +383,11 @@ export default function CaseStudies() {
           <br />
           elevating their brand
         </h2>
-        <p className="text-gray-600 max-w-xl mx-auto mb-8">
+        <p className="text-gray-600 max-w-xl mx-auto px-4 mb-8">
           Schedule a free discovery call with us to talk strategy, goals, and
           how we can help you grow.
         </p>
-        <div className="flex flex-row items-center justify-center gap-8 mb-8 opacity-60">
+        <div className="flex flex-row items-center justify-center gap-8 px-2 mb-8 opacity-60">
           {/* Placeholder logos and names */}
           <div className="flex flex-col items-center">
             <span className="bg-gray-200 rounded-full w-12 h-6 mb-1" />
@@ -401,7 +403,7 @@ export default function CaseStudies() {
           </div>
           <div className="flex flex-col items-center">
             <span className="bg-gray-200 rounded-full w-12 h-6 mb-1" />
-            <span className="text-xs text-gray-500"> </span>
+            <span className="text-xs text-gray-500">uXLowbae</span>
           </div>
         </div>
         <button className="flex items-center gap-2 px-6 py-3 rounded-full bg-black text-white font-semibold text-base shadow hover:bg-gray-900 transition-colors mb-3">
