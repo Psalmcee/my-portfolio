@@ -3,6 +3,8 @@ import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
+
 
 const cases = [
   {
@@ -89,18 +91,18 @@ const testimonials = [
   {
     name: "Savannah Nguyen",
     role: "Marketing Director, Cloud Rush",
-    quote: "Working with Samuel was a game-changer for our business.",
+    quote: "Working with Axiom Tech Labs was a game-changer for our business.",
   },
   {
     name: "Arlene McCoy",
     role: "CEO, Vertex Labs",
     quote:
-      "Samuel's attention to detail and innovative approach exceeded our expectations.",
+      "Their attention to detail and innovative approach exceeded our expectations.",
   },
   {
     name: "Theresa Webb",
     role: "Founder, CloudDash",
-    quote: "Working with Samuel was a game-changer for our business.",
+    quote: "Working with Axiom Tech Labs was a game-changer for our business.",
   },
 ];
 
@@ -148,19 +150,20 @@ export default function CaseStudies() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          My Works
+          Our Works
         </motion.div>
-        <h2 className="text-3xl font-bold mb-4 px-4 text-center md:text-left md:max-w-lg text-black font-space">
-          How I’ve helped other businesses Grow 10X
+        <h2 className="text-3xl md:text-4xl font-bold mb-4 px-4 text-center md:text-left md:max-w-lg text-black font-space">
+          How We&apos;ve Helped Other Businesses Grow 10X
         </h2>
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4 sm:gap-0 mb-4 px-4">
           <p className="flex-1 text-left md:max-w-2/5 text-black pb-4 sm:pb-0">
-            See how I&apos;ve helped clients turn ambitious ideas into successful
+            See how we&apos;ve helped clients turn ambitious ideas into successful
             digital products.
           </p>
-          <button className="rounded-full bg-white text-black p-2 px-6 shadow hover:bg-black hover:text-white hover:cursor-pointer transition-colors whitespace-nowrap flex flex-row">
+          <Link href={"/projects"}
+           className="rounded-full bg-white text-black p-2 px-6 shadow hover:bg-black hover:text-white hover:cursor-pointer transition-colors whitespace-nowrap flex flex-row">
             View All Products <ArrowUpRight />
-          </button>
+          </Link>
         </div>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mx-4">
@@ -210,11 +213,11 @@ export default function CaseStudies() {
       <section className="py-12 bg-gray-50">
         <div className="max-w-6xl mx-auto flex flex-col lg:flex-row items-center gap-8 px-4">
           <div className="flex-1 flex flex-col justify-center">
-            <h2 className="text-3xl font-medium mb-4">
+            <h2 className="text-3xl md:text-4xl font-medium mb-4">
               Who We Are Crafting Our Success
             </h2>
             <p className="mb-8">
-              I offer high-quality development services to elevate your brand`&apos;`s
+              We offer high-quality development services to elevate your brand&apos;s
               presence and make a lasting impression. Partner with us for
               impactful, user-focused solutions that bring your vision to life.
             </p>
@@ -250,9 +253,9 @@ export default function CaseStudies() {
       </section>
       <section className="py-12">
         <p className="text-center font-medium text-gray-800">Pricing Plans</p>
-        <h2 className="text-3xl font-bold mb-8 text-center">
+        <h2 className="text-5xl font-bold mb-6 text-center">
           Flexible Pricing built to <br />
-          <span className="text-gray-600">Scale Businesses</span>
+          <span className="text-gray-500">Scale Businesses</span>
         </h2>
         <p className="text-center pb-12 text-gray-600 font-semibold">
           Choose from tailored packages that fits your business goals and
@@ -288,7 +291,7 @@ export default function CaseStudies() {
                 Increased conversion rate by 400%
               </p>
               <p className="italic mb-4 text-gray-700">
-                &quot;We needed a high-converting website, and Samuel delivered his
+                &quot;We needed a high-converting website, and they delivered their
                 expertise skills and helped us increase our conversion rate.&quot;
               </p>
               <p className="font-medium text-right text-gray-600">Name</p>
@@ -309,7 +312,7 @@ export default function CaseStudies() {
         </div>
       </section>
       <section className="py-12 bg-gray-50">
-        <h2 className="text-3xl md:text-start md:max-w-md font-medium mb-6 text-center font-space">
+        <h2 className="text-3xl md:text-4xl md:text-start md:max-w-md font-medium mb-6 text-center font-space">
           What Our Clients are Saying
         </h2>
         <p className="text-center md:text-start md:max-w-md pb-12 text-gray-600 font-semibold italic">
@@ -366,12 +369,12 @@ export default function CaseStudies() {
           <div className="bg-white rounded-2xl shadow-xl p-6 flex flex-col gap-4 border border-gray-100">
             <div className="font-bold text-lg mb-1">Cant find your answer?</div>
             <div className="text-gray-600 mb-4">Get in touch with our support team, they are friendly!</div>
-            <a
-              href="#contact"
+            <Link
+              href="/contact"
               className="inline-flex items-center w-1/2 gap-2 px-5 py-2 rounded-full border border-gray-300 bg-white text-black font-medium shadow hover:bg-black hover:text-white transition-colors"
             >
-              Contact us <ArrowUpRight size={18} />
-            </a>
+              Contact Us <ArrowUpRight size={18} />
+            </Link>
           </div>
         </div>
       </section>

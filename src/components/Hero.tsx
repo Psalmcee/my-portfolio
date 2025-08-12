@@ -2,6 +2,7 @@
 import { motion } from 'framer-motion';
 import Navbar from './Navbar';
 import { ChevronDown } from 'lucide-react';
+import Link from 'next/link';
 
 export default function Hero() {
   return (
@@ -13,13 +14,13 @@ export default function Hero() {
       >
         <Navbar />
         <div className="max-w-4xl mx-auto text-center flex flex-col items-center justify-center h-full min-h-[60vh]">
-          <motion.h1
-        className="text-5xl font-medium mb-4 font-space"
+        <motion.h1
+        className="text-5xl md:text-7xl font-medium mb-4 font-space"
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
       >
-        Creative Solutions<br /><span className='text-white'>Real Results</span>
+        Creative Web Solutions<br /><span className='text-white'>Real Results</span>
       </motion.h1>
       <motion.p
         className="text-lg text-gray-200 font-mono max-w-1/2 font-bold mb-8"
@@ -36,7 +37,7 @@ export default function Hero() {
         transition={{ delay: 0.4, duration: 0.8 }}
       >
         <button className="px-6 py-2 bg-black text-white rounded-full shadow-lg hover:scale-105 transition-transform">Book a 1:1 Call</button>
-        <button className="px-6 py-2 border bg-lime-50 text-black hover:text-white border-black rounded-full hover:bg-gray-700 transition">View Pricing</button>
+        <Link href={'/pricing'} className="px-6 py-2 border bg-lime-50 text-black hover:text-white border-black rounded-full hover:bg-gray-700 transition">View Pricing</Link>
       </motion.div>
          
         </div>

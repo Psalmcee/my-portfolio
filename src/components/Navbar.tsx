@@ -1,15 +1,15 @@
-
 "use client";
+import Image from "next/image";
 import { ArrowUpRight } from "lucide-react";
 import React, { useState } from "react";
 import Link from "next/link";
 
 
 const navItems = [
-  { label: "Projects", href: "#projects" },
-  { label: "About", href: "#about" },
-  { label: "Pricing", href: "#pricing" },
-  { label: "Contact", href: "#contact" },
+  { label: "Projects", href: "/projects" },
+  { label: "About", href: "/about" },
+  { label: "Pricing", href: "/pricing" },
+  { label: "Contact", href: "/contact" },
 ];
 
 export default function Navbar() {
@@ -17,12 +17,20 @@ export default function Navbar() {
   return (
     <header className="w-full flex justify-center z-50">
       <nav
-        className="mx-auto mt-4 mb-12 flex items-center justify-between w-full max-w-5xl py-0 px-2 md:py-2 bg-black rounded-full shadow-lg border border-gray-900 absolute top-0 left-0.5 right-0.5"
+        className="mx-auto mt-4 mb-12 flex items-center justify-between w-full max-w-5xl py-0 px-2 md:py-2 bg-black rounded-full shadow-lg border border-gray-900 absolute top-0 left-0.5 right-0.5 z-[100]"
         aria-label="Main navigation"
       >
-        <a href="#home" className="flex text-lg md:text-2xl items-center pl-2 md:mr-10 whitespace-nowrap font-bold focus:outline-none focus:ring-2 focus:ring-white" aria-label="Homepage">
-          Samuel.<span className="text-white">Obidi</span>
-        </a>
+        <Link href="/" className="flex items-center pl-2 md:mr-10 whitespace-nowrap font-bold focus:outline-none" aria-label="Homepage">
+          <span className="block w-44 h-16 relative">
+              <Image
+                src="/axiom-logo.png"
+                alt="Axiom Tech Labs"
+                width={40}
+                height={40}
+                className="object-contain w-full h-full"
+              />
+          </span>
+        </Link>
         {/* Hamburger icon for small screens */}
         <button
           className="sm:hidden ml-auto p-2 rounded focus:outline-none focus:ring-2 focus:ring-white"
@@ -72,9 +80,10 @@ export default function Navbar() {
         </ul>
         <a
           href="#book-call"
-          className="hidden sm:flex ml-2 md:ml-10 px-5 md:px-7 py-2 rounded-full bg-white text-black font-semibold shadow hover:bg-gray-400 transition-all duration-200 border border-gray-300 flex-row items-center whitespace-nowrap focus:outline-none focus:ring-2 focus:ring-black"
+          className="hidden sm:flex ml-2 md:ml-10 px-5 md:px-7 py-4 rounded-full bg-white text-black font-semibold shadow hover:bg-gray-400 transition-all duration-200 border border-gray-300 flex-row items-center whitespace-nowrap focus:outline-none focus:ring-2 focus:ring-black"
           tabIndex={0}
-        >
+     
+    >
           Book a Call <ArrowUpRight />
         </a>
         {/* Mobile menu overlay */}
