@@ -2,19 +2,20 @@ import React from "react";
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { ArrowRight } from "lucide-react";
+import BookACall from "@/components/BookACall";
 
 const plans = [
   {
     name: "Landing Page",
     description:
       "Ideal for implementing or redesigning a website to increase your conversion rate.",
-    price: "$2999+",
+    price: "N200,000",
     features: [
-      "Senior designer",
-      "10-14 Days turnaround time",
-      "One Active Request",
-      "SEO Optimizationn",
-      "Slack Channel",
+      "Domain & Hosting setup",
+      "Business Email",
+      "Logo Design",
+      "Up to 5 Sections",
+      "SEO Optimizationn",      
       "50/50 Secure Payment",
     ],
   },
@@ -22,11 +23,12 @@ const plans = [
     name: "Partnership",
     description:
       "Tailored for businesses with ongoing designs & marketing needs to scale your business.",
-    price: "$3999+",
+    price: "N450,000",
     features: [
-      "Dedicated team of experts",
-      "Execution of all aspects",
-      "Ongoing support",
+      "Domain & Hosting setup",
+      "Business Email",
+      "Logo Design",
+      "Ongoing & Priority support",
       "Web & App Develiopment",
       "Unlimited Requests",
       " Advanced SEO & Marketing",
@@ -35,8 +37,11 @@ const plans = [
   {
     name: "Custom",
     description: "Tailored digital experience built for unique business needs.",
-    price: "$9999+",
+    price: "N599,999+",
     features: [
+      "Domain & Hosting setup",
+      "Business Email",
+      "Logo Design",
       "Dedicated team of experts",
       "Execution of all aspects",
       "Ongoing support",
@@ -64,22 +69,39 @@ export default function PricingPage() {
             {plans.map((p, i) => (
               <div
                 key={i}
-                className="group bg-white hover:bg-black hover:text-white rounded-2xl shadow-xl p-6 flex flex-col items-center h-full min-h-[420px] transition-colors duration-200"
+                className="group bg-white hover:bg-black hover:text-white rounded-2xl shadow-xl p-6 flex flex-col items-center h-full min-h-[420px] transition-colors duration-200 hover:-translate-y-3 hover:scale-105 card-animated"
               >
                 <div className="text-xl font-semibold mb-2">{p.name}</div>
                 <div className="text-gray-600 group-hover:text-gray-200 mb-2 transition-colors duration-200">
                   {p.description}
                 </div>
-                <div className="text-3xl font-bold mb-6">{p.price}</div>
+                <div className="text-3xl font-bold mb-6 flex items-baseline gap-2">
+                  {i === 2 && (
+                    <span className="text-xs text-gray-500 mr-0.5">Starts at</span>
+                  )}
+                  {p.price}
+                  {i === 0 && (
+                    <span className="text-xs text-gray-500 ml-0.5">Fixed</span>
+                  )}
+                  {i === 1 && (
+                    <span className="text-xs text-gray-500 ml-0.5">/month</span>
+                  )}
+                </div>
                 <ul className="mb-4 text-gray-600 group-hover:text-gray-200 transition-colors duration-200">
                   {p.features.map((f, j) => (
                     <li key={j}>⩤⩥{f}</li>
                   ))}
                 </ul>
                 <div className="flex-grow" />
-                <button className="w-full px-6 py-2 bg-black text-white rounded-full flex items-center justify-center gap-6 mt-4 transition-colors duration-200 group-hover:bg-white group-hover:text-black hover:cursor-pointer">
-                  Get Started <ArrowRight />
-                </button>
+                <a
+                  href="https://calendly.com/samuelobidi8/30min"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full inline-flex items-center justify-center gap-2 px-6 py-2 bg-amber-600 text-white rounded-full mt-4 shadow-lg hover:scale-105 transform transition-all duration-200"
+                >
+                  <span>Get Started</span>
+                  <ArrowRight className="w-5 h-5" />
+                </a>
               </div>
             ))}
           </div>
@@ -94,6 +116,7 @@ export default function PricingPage() {
           </ul>
         </div>
       </section>
+      <BookACall />
       <Footer />
     </div>
   );

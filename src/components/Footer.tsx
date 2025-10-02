@@ -13,30 +13,10 @@ export default function Footer() {
          <h2 className="text-3xl md:text-4xl text-center lg:text-start md:max-w-md font-medium mb-6  font-space">
             Make Your Business Stand Out Today!
           </h2>
-          <Link href={'/contact'} className="mb-8 md:mb-0 text-center md:text-left gap-1 flex-1 flex flex-row">
+          <Link href={'/contact'} className="mb-8 md:mb-0 ml-3 text-center md:text-left gap-1 flex-1 flex flex-row">
             Contact Us Now<ArrowTopRightOnSquareIcon className='w-5'/>
           </Link>
         </div>
-        {/* <div className="flex flex-col gap-2 md:gap-6 flex-1 items-center justify-center w-full max-w-xs md:max-w-sm mx-auto">
-          {navItems.map((item) => (
-            <span
-              key={item.label}
-              className="flex flex-row items-center w-full md:w-2/3 border-b border-gray-400 pb-2 hover:border-black transition-all duration-150 cursor-pointer justify-between"
-            >
-              {item.href.startsWith('/') ? (
-                <a href={item.href} className="flex-1">
-                  {item.label}
-                </a>
-              ) : (
-                <a href={item.href} className="flex-1">
-                  {item.label}
-                </a>
-              )}
-              <ArrowUpRight />
-            </span>
-          ))}
-        </div> */}
-      
           <div className="max-w-6xl mx-auto px-4 mt-8 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
               {/* Logo Section */}
@@ -44,8 +24,7 @@ export default function Footer() {
                 <div className="rounded-lg p-6 bg-gradient-to-br from-gray-900/70 to-gray-700/40 backdrop-blur-lg">
                   <Image src="/axiom-logo.png" alt="Axiom Tech Labs" width={80} height={80} className="h-20 w-auto" />
                   <p className="text-sm text-gray-800">
-                    Innovating the future through technology and creative
-                    solutions.
+                    We design bold, conversion-driven websites that elevate your brand and turn visitors into customers.
                   </p>
                 </div>
               </div>
@@ -90,7 +69,7 @@ export default function Footer() {
                         </li>
                         <li>
                           <Link
-                            href="/projects"
+                            href="/services"
                             className="hover:text-gray-200 transition-colors"
                           >
                             Services

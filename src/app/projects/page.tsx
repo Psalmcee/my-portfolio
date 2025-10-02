@@ -6,6 +6,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
+import BookACall from "@/components/BookACall";
 
 const projects = [
   {
@@ -193,6 +194,7 @@ export default function ProjectsPage() {
           ))}
         </div>
       </section>
+      <BookACall />
       <footer className="w-full">
         <Footer />
       </footer>

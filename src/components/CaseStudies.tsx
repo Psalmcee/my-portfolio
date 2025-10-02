@@ -41,29 +41,32 @@ const stats = [
 ];
 
 const plans = [
-  {
+    {
     name: "Landing Page",
     description:
       "Ideal for implementing or redesigning a website to increase your conversion rate.",
-    price: "$2999+",
+    price: "N200,000",
     features: [
-      "Senior designer",
-      "10-14 Days turnaround time",
-      "One Active Request",
-      "SEO Optimizationn",
-      "Slack Channel",
+      "Domain & Hosting setup",
+      "Business Email",
+      "Logo Design",
+      "Up to 5 Sections",
+      "SEO Optimizationn",      
       "50/50 Secure Payment",
+      "Limited Support",
+      "Continued Support"
     ],
   },
   {
     name: "Partnership",
     description:
       "Tailored for businesses with ongoing designs & marketing needs to scale your business.",
-    price: "$3999+",
+    price: "N450,000",
     features: [
-      "Dedicated team of experts",
-      "Execution of all aspects",
-      "Ongoing support",
+      "Domain & Hosting setup",
+      "Business Email",
+      "Logo Design",
+      "Ongoing & Priority support",
       "Web & App Develiopment",
       "Unlimited Requests",
       " Advanced SEO & Marketing",
@@ -72,8 +75,11 @@ const plans = [
   {
     name: "Custom",
     description: "Tailored digital experience built for unique business needs.",
-    price: "$9999+",
+    price: "N599,999+",
     features: [
+      "Domain & Hosting setup",
+      "Business Email",
+      "Logo Design",
       "Dedicated team of experts",
       "Execution of all aspects",
       "Ongoing support",
@@ -106,43 +112,56 @@ const testimonials = [
   },
 ];
 
-const faqs = [
-  {
-    q: "What services does your agency offer?",
-    a: "Web development, UI/UX design, SEO, code deployment, and ongoing support.",
-  },
-  {
-    q: "Do you work with startups or only established companies?",
-    a: "We work with both startups and established companies.",
-  },
-  {
-    q: "What platforms do you use for the code workflow?",
-    a: "We use modern web technologies including Next.js, React, and Tailwind CSS.",
-  },
-  {
-    q: "How long does a typical project take?",
-    a: "Project timelines vary, but most are completed within 4-8 weeks.",
-  },
-  {
-    q: "Can you help with just one part of the project?",
-    a: "Yes, we offer flexible engagement models.",
-  },
-  {
-    q: "What’s your pricing structure?",
-    a: "We offer fixed and custom pricing based on project needs.",
-  },
-  {
-    q: "Do you offer ongoing support after the project is finished?",
-    a: "Yes, ongoing support is available.",
-  },
-];
 
-import React, { useState } from "react";
+
+import React from "react";
+import FAQs from "./FAQs";
+import BookACall from "./BookACall";
 
 export default function CaseStudies() {
-  const [openFaq, setOpenFaq] = useState<number | null>(null);
   return (
     <section className="py-12 px-12 md:px-16 text-black">
+      <section className="py-12 bg-gray-50">
+        <div className="max-w-6xl mx-auto flex flex-col lg:flex-row items-center gap-8 px-4">
+          <div className="flex-1 flex flex-col justify-center">
+            <h2 className="text-3xl md:text-4xl font-medium mb-4">
+              Who We Are Crafting Our Success
+            </h2>
+            <p className="mb-8">
+              We offer high-quality development services to elevate your brand&apos;s
+              presence and make a lasting impression. Partner with us for
+              impactful, user-focused solutions that bring your vision to life.
+            </p>
+            <div className="grid grid-cols-2 gap-6">
+              {stats.map((s, i) => (
+                <motion.div
+                  key={i}
+                  className="bg-white rounded-xl shadow-lg p-6 flex flex-col items-start border border-gray-100 hover:shadow-2xl transition-shadow duration-300 transform hover:scale-105"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: i * 0.1, duration: 0.6 }}
+                >
+                  <div className="text-5xl font-extrabold mb-2 text-amber-700 font-space">
+                    {s.value}
+                  </div>
+                  <div className="text-gray-700 text-base font-medium">{s.label}</div>
+                </motion.div>
+              ))}
+              <Link href={"/about"} className="">More About Us...</Link>
+            </div>
+          </div>
+          <div className="flex-1 flex justify-center items-center w-full lg:mt-40">
+            <Image
+              src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=600&q=80"
+              alt="Case Study"
+              width={400}
+              height={300}
+              className="w-full max-w-md h-auto rounded-lg shadow-md"
+            />
+          </div>
+        </div>
+      </section>
       <div className="header-container">
         <motion.div
           className="max-w-6xl mx-auto px-4 text-center md:text-left text-black mb-2"
@@ -170,7 +189,7 @@ export default function CaseStudies() {
         {cases.map((c, i) => (
           <motion.div
             key={i}
-            className="bg-gray-100 rounded-2xl p-2 flex flex-col items-start shadow-md hover:shadow-xl transition-shadow mx-2"
+            className="bg-gray-100 rounded-2xl p-2 flex flex-col items-start shadow-md hover:shadow-xl transition-shadow duration-300 mx-2 transform hover:scale-105"
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -210,52 +229,12 @@ export default function CaseStudies() {
           </motion.div>
         ))}
       </div>
-      <section className="py-12 bg-gray-50">
-        <div className="max-w-6xl mx-auto flex flex-col lg:flex-row items-center gap-8 px-4">
-          <div className="flex-1 flex flex-col justify-center">
-            <h2 className="text-3xl md:text-4xl font-medium mb-4">
-              Who We Are Crafting Our Success
-            </h2>
-            <p className="mb-8">
-              We offer high-quality development services to elevate your brand&apos;s
-              presence and make a lasting impression. Partner with us for
-              impactful, user-focused solutions that bring your vision to life.
-            </p>
-            <div className="grid grid-cols-2 gap-6">
-              {stats.map((s, i) => (
-                <motion.div
-                  key={i}
-                  className="text-center"
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: i * 0.1, duration: 0.6 }}
-                >
-                  <div className="text-5xl text-left font-semi-bold mb-2 font-space">
-                    {s.value}
-                  </div>
-                  <div className="text-gray-600 text-left">{s.label}</div>
-                </motion.div>
-              ))}
-              <p className="">More About Us...</p>
-            </div>
-          </div>
-          <div className="flex-1 flex justify-center items-center w-full lg:mt-50">
-            <Image
-              src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=600&q=80"
-              alt="Case Study"
-              width={400}
-              height={300}
-              className="w-full max-w-md h-auto rounded-lg shadow-md"
-            />
-          </div>
-        </div>
-      </section>
+      
       <section className="py-12">
         <p className="text-center font-medium text-gray-800">Pricing Plans</p>
         <h2 className="text-5xl font-bold mb-6 text-center">
           Flexible Pricing built to <br />
-          <span className="text-gray-500">Scale Businesses</span>
+          <span className="text-amber-700">Scale Businesses</span>
         </h2>
         <p className="text-center pb-12 text-gray-600 font-semibold">
           Choose from tailored packages that fits your business goals and
@@ -266,7 +245,7 @@ export default function CaseStudies() {
             {plans.map((p, i) => (
               <div
                 key={i}
-                className="group bg-white hover:bg-black hover:text-white rounded-2xl shadow-xl p-6 flex flex-col items-center h-full min-h-[420px] transition-colors duration-200"
+                className="group bg-white hover:bg-black hover:text-white rounded-2xl shadow-xl p-6 flex flex-col items-center h-full min-h-[420px] transition-colors duration-200 transform hover:scale-105"
               >
                 <div className="text-xl font-semibold mb-2">{p.name}</div>
                 <div className="text-gray-600 group-hover:text-gray-200 mb-2 transition-colors duration-200">
@@ -279,7 +258,7 @@ export default function CaseStudies() {
                   ))}
                 </ul>
                 <div className="flex-grow" />
-                <button className="w-full px-6 py-2 bg-black text-white rounded-full flex items-center justify-center gap-6 mt-4 transition-colors duration-200 group-hover:bg-white group-hover:text-black hover:cursor-pointer">
+                <button className="w-full px-6 py-2 bg-amber-700 text-white rounded-full flex items-center justify-center gap-6 mt-4 transition-colors duration-200 group-hover:text-white hover:cursor-pointer">
                   Get Started <ArrowRight />
                 </button>
               </div>
@@ -294,7 +273,7 @@ export default function CaseStudies() {
                 &quot;We needed a high-converting website, and they delivered their
                 expertise skills and helped us increase our conversion rate.&quot;
               </p>
-              <p className="font-medium text-right text-gray-600">Name</p>
+              <p className="font-medium text-right text-gray-600">Goki Gopal</p>
             </div>
             <div className="flex-1 max-w-md bg-black text-white rounded-2xl p-6 border border-gray-900 shadow-lg flex flex-col justify-between min-w-[260px]">
               <p className="font-semibold text-lg mb-2">
@@ -304,8 +283,10 @@ export default function CaseStudies() {
                 Strategic web design, SEO-driven content, and paid ad campaigns
                 tailored to drive results and conversions
               </p>
-              <button className="rounded-full bg-white text-black font-semibold px-6 py-2 mt-2 shadow hover:bg-black hover:text-white transition-all duration-200 border self-end flex flex-row gap-4 hover:cursor-pointer">
-                Book a call <ArrowUpRight />
+              <button className="rounded-full bg-white text-black font-semibold px-6 py-2 mt-2 shadow hover:bg-amber-700 hover:text-white transition-all duration-200 border self-end flex flex-row gap-4 hover:cursor-pointer">
+                <a href="https://calendly.com/samuelobidi8/30min" target="_blank" rel="noopener noreferrer" className="flex flex-row gap-2 items-center">
+                  Book a Call <ArrowRight size={16} />
+                </a>
               </button>
             </div>
           </div>
@@ -324,7 +305,7 @@ export default function CaseStudies() {
           {testimonials.map((t, i) => (
             <motion.div
               key={i}
-              className="border border-dashed rounded-lg p-6 shadow text-center hover:shadow-xl transition-shadow"
+              className="border border-dashed rounded-lg p-6 shadow text-center hover:shadow-xl transition-shadow duration-300 transform hover:scale-105"
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -337,88 +318,9 @@ export default function CaseStudies() {
           ))}
         </div>
       </section>
-      <section className="py-16 mb-4 px-8 rounded-xl shadow flex flex-col md:flex-row gap-12 md:gap-24 justify-between relative">
-        <div className="text-3xl font-bold mb-8 text-center md:text-left">
-          FAQs
-        </div>
-        <div className="max-w-2xl w-full lg:max-w-1/2 md:ml-auto">
-          {faqs.map((f, i) => (
-            <div key={i} className="mb-6 border-b border-gray-200 pb-4">
-              <div
-                className="flex items-center justify-between cursor-pointer"
-                onClick={() => setOpenFaq(openFaq === i ? null : i)}
-              >
-                <div className="font-semibold mb-2 md:text-right">{f.q}</div>
-                <button
-                  className="ml-4 w-8 h-8 flex items-center justify-center rounded-full bg-gray-100 text-xl font-bold focus:outline-none"
-                  aria-label={openFaq === i ? "Hide answer" : "Show answer"}
-                >
-                  {openFaq === i ? "-" : "+"}
-                </button>
-              </div>
-              {openFaq === i && (
-                <div className="text-gray-600 mt-2 animate-fade-in-down md:text-right">
-                  {f.a}
-                </div>
-              )}
-            </div>
-          ))}
-        </div>
-        {/* Can't find your answer card - only on large screens */}
-        <div className="hidden lg:block absolute bottom-4 left-4 w-[380px]">
-          <div className="bg-white rounded-2xl shadow-xl p-6 flex flex-col gap-4 border border-gray-100">
-            <div className="font-bold text-lg mb-1">Cant find your answer?</div>
-            <div className="text-gray-600 mb-4">Get in touch with our support team, they are friendly!</div>
-            <Link
-              href="/contact"
-              className="inline-flex items-center w-1/2 gap-2 px-5 py-2 rounded-full border border-gray-300 bg-white text-black font-medium shadow hover:bg-black hover:text-white transition-colors"
-            >
-              Contact Us <ArrowUpRight size={18} />
-            </Link>
-          </div>
-        </div>
-      </section>
+      <FAQs />    
       {/* Discovery Call Section (matches provided image) */}
-      <section className="py-24 rounded-xl shadow flex flex-col items-center justify-center text-center">
-        <p className="text-sm text-gray-700 mb-2">Book a call</p>
-        <h2 className="text-4xl md:text-5xl font-medium font-space mb-4 text-black leading-tight">
-          Join countless professionals
-          <br />
-          elevating their brand
-        </h2>
-        <p className="text-gray-600 max-w-xl mx-auto px-4 mb-8">
-          Schedule a free discovery call with us to talk strategy, goals, and
-          how we can help you grow.
-        </p>
-        <div className="flex flex-row items-center justify-center gap-8 px-2 mb-8 opacity-60">
-          {/* Placeholder logos and names */}
-          <div className="flex flex-col items-center">
-            <span className="bg-gray-200 rounded-full w-12 h-6 mb-1" />
-            <span className="text-xs text-gray-500">LOGO</span>
-          </div>
-          <div className="flex flex-col items-center">
-            <span className="bg-gray-200 rounded-full w-12 h-6 mb-1" />
-            <span className="text-xs text-gray-500">Acme Corp</span>
-          </div>
-          <div className="flex flex-col items-center">
-            <span className="bg-gray-200 rounded-full w-12 h-6 mb-1" />
-            <span className="text-xs text-gray-500">Quantum</span>
-          </div>
-          <div className="flex flex-col items-center">
-            <span className="bg-gray-200 rounded-full w-12 h-6 mb-1" />
-            <span className="text-xs text-gray-500">uXLowbae</span>
-          </div>
-        </div>
-        <button className="flex items-center gap-2 px-6 py-3 rounded-full bg-black text-white font-semibold text-base shadow hover:bg-gray-900 transition-colors mb-3">
-          Book a 15-Min call <ArrowRight size={18} />
-        </button>
-        <div className="flex items-center justify-center gap-2 mt-2">
-          <span className="inline-block w-2 h-2 rounded-full bg-green-500" />
-          <span className="text-xs text-gray-600">
-            Only 2 open slots available
-          </span>
-        </div>
-      </section>
+      <BookACall />
     </section>
   );
 }

@@ -59,7 +59,7 @@ export default function AdvertLogos() {
           {carouselLogos.map((logo, i) => (
             <div
               key={i}
-              className="w-32 h-12 bg-gray-200 flex items-center justify-center rounded grayscale hover:grayscale-0 transition-all duration-300 shadow select-none"
+              className="w-32 h-12 bg-gray-200 flex items-center justify-center rounded transition-all duration-300 shadow select-none"
             >
               <Image
                 src={logo.src}

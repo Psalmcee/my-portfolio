@@ -19,37 +19,52 @@ export default function Contact() {
           <div className="grid md:grid-cols-2 gap-8">
             <div className="bg-white/80 backdrop-blur-sm rounded-xl p-8 shadow-lg">
               <h2 className="text-2xl font-semibold mb-6">Get in Touch</h2>
-              <form className="space-y-6">
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">Name</label>
-                  <input
-                    type="text"
-                    className="w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                    placeholder="Your name"
-                  />
-                </div>
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">Email</label>
-                  <input
-                    type="email"
-                    className="w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                    placeholder="your@email.com"
-                  />
-                </div>
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">Message</label>
-                  <textarea
-                    className="w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                    rows={4}
-                    placeholder="Your message"
-                  ></textarea>
-                </div>
-                <button
-                  type="submit"
-                  className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors"
-                >
-                  Send Message
-                </button>
+
+              {/* The form posts to a server route (e.g. /app/api/contact/route.ts) which should send the email */}
+              <form action="/api/contact" method="POST" className="space-y-6">
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">Name</label>
+                <input
+                name="name"
+                type="text"
+                required
+                className="w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                placeholder="Your name"
+                />
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">Email</label>
+                <input
+                name="email"
+                type="email"
+                required
+                className="w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                placeholder="your@email.com"
+                />
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">Message</label>
+                <textarea
+                name="message"
+                required
+                className="w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                rows={4}
+                placeholder="Your message"
+                ></textarea>
+              </div>
+
+              <button
+                type="submit"
+                className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors"
+              >
+                Send Message
+              </button>
+
+              <p className="text-sm text-gray-600 mt-2">
+                By sending this message you agree to be contacted. We will respond as soon as possible.
+              </p>
               </form>
             </div>
             
@@ -63,7 +78,7 @@ export default function Contact() {
                   </div>
                   <div className="flex items-center gap-4">
                     <Phone className="text-blue-600" />
-                    <p>+1 (555) 123-4567</p>
+                    <p>(+234) 9033-370-543</p>
                   </div>
                   <div className="flex items-center gap-4">
                     <MapPin className="text-blue-600" />
@@ -88,7 +103,7 @@ export default function Contact() {
             </div>
           </div>
         </div>
-      </div>
+  </div>
       <Footer />
     </div>
   );

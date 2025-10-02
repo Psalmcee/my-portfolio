@@ -2,6 +2,7 @@ import React from 'react';
 import { Building2, Users, Trophy, Target } from 'lucide-react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
+import FAQs from '@/components/FAQs';
 
 export default function aboutPage() {
   return (
@@ -55,6 +56,7 @@ export default function aboutPage() {
           </div>
         </div>
       </div>
+      <FAQs />
       <Footer />
     </div>
   );

@@ -5,9 +5,10 @@ import React, { useState } from "react";
 import Link from "next/link";
 
 
-const navItems = [
-  { label: "Projects", href: "/projects" },
+const navItems = [  
   { label: "About", href: "/about" },
+  {label: "Services", href: "/services"},
+  { label: "Projects", href: "/projects" },
   { label: "Pricing", href: "/pricing" },
   { label: "Contact", href: "/contact" },
 ];
@@ -79,10 +80,10 @@ export default function Navbar() {
           ))}
         </ul>
         <a
-          href="#book-call"
-          className="hidden sm:flex ml-2 md:ml-10 px-5 md:px-7 py-4 rounded-full bg-white text-black font-semibold shadow hover:bg-gray-400 transition-all duration-200 border border-gray-300 flex-row items-center whitespace-nowrap focus:outline-none focus:ring-2 focus:ring-black"
+          href="https://calendly.com/samuelobidi8/30min"
+          className="hidden sm:flex ml-2 lg:ml-10 px-5 lg:px-7 py-4 rounded-full bg-amber-600 text-white font-semibold shadow-lg hover:scale-105 transform transition-all duration-200 border border-amber-700 flex-row items-center whitespace-nowrap focus:outline-none focus:ring-4 focus:ring-amber-200"
           tabIndex={0}
-     
+    
     >
           Book a Call <ArrowUpRight />
         </a>
