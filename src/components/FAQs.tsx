@@ -27,7 +27,7 @@ export default function FAQs() {
     a: "Yes, we offer flexible engagement models.",
   },
   {
-    q: "What’s your pricing structure?",
+    q: "What&apos;s your pricing structure?",
     a: "We offer fixed and custom pricing based on project needs.",
   },
   {
@@ -65,10 +65,10 @@ export default function FAQs() {
             </div>
           ))}
         </div>
-        {/* Can't find your answer card - only on large screens */}
+    {/* Can't find your answer card - only on large screens */}
         <div className="hidden lg:block absolute bottom-4 left-4 w-[380px]">
           <div className="bg-white rounded-2xl shadow-xl p-6 flex flex-col gap-4 border border-gray-100">
-            <div className="font-bold text-lg mb-1">Cant find your answer?</div>
+      <div className="font-bold text-lg mb-1">Can&apos;t find your answer?</div>
             <div className="text-gray-600 mb-4">Get in touch with our support team, they are friendly!</div>
             <Link
               href="/contact"

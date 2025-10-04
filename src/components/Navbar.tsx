@@ -28,6 +28,7 @@ export default function Navbar() {
                 alt="Axiom Tech Labs"
                 width={40}
                 height={40}
+                priority
                 className="object-contain w-full h-full"
               />
           </span>

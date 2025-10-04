@@ -8,7 +8,7 @@ import Image from 'next/image';
 
 export default function Footer() {
   return (
-    <footer className="py-12 bg-gray-100 text-black">
+    <footer className="py-12 bg-gray-300 text-black">
         <div className="flex flex-col items-start gap-8 lg:justify-left text-left max-w-6xl md:px-6 mx-auto">
          <h2 className="text-3xl md:text-4xl text-center lg:text-start md:max-w-md font-medium mb-6  font-space">
             Make Your Business Stand Out Today!
@@ -22,7 +22,15 @@ export default function Footer() {
               {/* Logo Section */}
               <div className="md:col-span-1">
                 <div className="rounded-lg p-6 bg-gradient-to-br from-gray-900/70 to-gray-700/40 backdrop-blur-lg">
-                  <Image src="/axiom-logo.png" alt="Axiom Tech Labs" width={80} height={80} className="h-20 w-auto" />
+                  <Image
+                    src="/axiom-logo.png"
+                    alt="Axiom Tech Labs"
+                    width={80}
+                    height={80}
+                    priority
+                    className="object-contain w-auto h-auto"
+                    style={{ width: 'auto', height: 'auto' }}
+                  />
                   <p className="text-sm text-gray-800">
                     We design bold, conversion-driven websites that elevate your brand and turn visitors into customers.
                   </p>

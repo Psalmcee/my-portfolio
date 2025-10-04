@@ -32,7 +32,7 @@ export default function BookACall() {
             <span className="text-xs text-gray-500">uXLowbae</span>
           </div>
         </div>
-        <a href="https://calendly.com/samuelobidi8/30min" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-amber-600 text-white font-semibold text-base shadow-xl hover:scale-105 transform transition-all duration-200 mb-3 focus:outline-none focus:ring-4 focus:ring-amber-200">
+        <a href="https://calendly.com/samuelobidi8/30min" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-amber-600 text-white font-semibold text-base shadow-xl hover:scale-105 transform transition-all duration-200 mb-3 focus:outline-none focus:ring-4 focus:ring-amber-400 hover:border-amber-200">
           Schedule a Call <ArrowRight size={16} />
         </a>
         <div className="flex items-center justify-center gap-2 mt-2">

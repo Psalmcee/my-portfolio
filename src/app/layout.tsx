@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Axiom Tech Labs",
     description: "High Quality Web Development Services",
-    url: "https://axiomtechlabs.com",
+    url: "https://axiomtechlabs.vercel.app",
     siteName: "Axiom Tech Labs",
     images: [
       {
@@ -40,18 +40,14 @@ metadata.twitter = {
   site: '@your_twitter_handle',
   title: 'Axiom Tech Labs',
   description: 'High Quality Web Development Services',
-  images: ['https://axiomtechlabs.com/og-image.png'],
-};
+  images: ['/axiom-logo.png'],
+}; 
 
-metadata.alternates = { canonical: 'https://axiomtechlabs.com' };
+metadata.alternates = { canonical: 'https://axiomtechlabs.vercel.app' };
 
 metadata.robots = { index: true, follow: true, nocache: false };
 
-metadata.themeColor = '#f59e0b';
-
 metadata.icons = { icon: '/favicon.ico' };
-
-
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -72,7 +68,7 @@ export default function RootLayout({
                 "@context": "https://schema.org",
                 "@type": "Organization",
                 "name": "Axiom Tech Labs",
-                "url": "https://axiomtechlabs.com",
+                "url": "https://axiomtechlabs.vercel.app",
                 "logo": "https://axiomtechlabs.com/favicon.ico",
                 "sameAs": [
                   "https://twitter.com/your",
@@ -82,11 +78,11 @@ export default function RootLayout({
               {
                 "@context": "https://schema.org",
                 "@type": "WebSite",
-                "url": "https://axiomtechlabs.com",
+                "url": "https://axiomtechlabs.vercel.app",
                 "name": "Axiom Tech Labs",
                 "potentialAction": {
                   "@type": "SearchAction",
-                  "target": "https://axiomtechlabs.com/search?q={search_term_string}",
+                  "target": "https://axiomtechlabs.vercel.app/search?q={search_term_string}",
                   "query-input": "required name=search_term_string"
                 }
               },
@@ -98,7 +94,7 @@ export default function RootLayout({
                     "@type": "ListItem",
                     "position": 1,
                     "name": "Home",
-                    "item": "https://axiomtechlabs.com/"
+                    "item": "https://axiomtechlabs.vercel.app/"
                   }
                 ]
               }

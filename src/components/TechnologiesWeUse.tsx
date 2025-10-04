@@ -77,8 +77,15 @@ const TechnologiesWeUse = () => (
       <div className="animate-carousel inline-block whitespace-nowrap" style={{ animation: 'carousel 20s linear infinite' }}>
         {techStack.concat(techStack).map((tech, idx) => (
           <div key={tech.name + idx} className="inline-block mx-8 align-top">
-            <div className="bg-white rounded-xl shadow p-4 mb-2 flex items-center justify-center h-20 w-20 mx-auto">
-              <Image src={tech.logo} alt={tech.name} width={48} height={48} className="object-contain" />
+              <div className="bg-white rounded-xl shadow p-4 mb-2 flex items-center justify-center h-20 w-20 mx-auto">
+              <Image
+                src={tech.logo}
+                alt={tech.name}
+                width={48}
+                height={48}
+                className="object-contain w-auto h-auto"
+                style={{ width: 'auto', height: 'auto' }}
+              />
             </div>
             <span className="text-sm font-medium text-gray-700 block mt-1">{tech.name}</span>
           </div>

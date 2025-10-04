@@ -78,7 +78,13 @@ const WhatWeDo: React.FC = () => {
             className="relative bg-white rounded-2xl overflow-hidden shadow-lg transform transition-all duration-500 hover:-translate-y-3 hover:scale-105 card-animated"
           >
             <div className="h-48 w-full relative">
-              <Image src={s.img} alt={s.title} fill className="object-cover" />
+              <Image
+                src={s.img}
+                alt={s.title}
+                fill
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                className="object-cover"
+              />
             </div>
             <div className="p-6">
               <h3 className="text-xl font-bold mb-2 text-amber-600 transition-colors duration-200 service-title">{s.title}</h3>
