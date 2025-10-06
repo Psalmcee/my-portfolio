@@ -21,8 +21,8 @@ export default function Navbar() {
         className="mx-auto mt-4 mb-12 flex items-center justify-between w-full max-w-5xl py-0 px-2 md:py-2 bg-black rounded-full shadow-lg border border-gray-900 absolute top-0 left-0.5 right-0.5 z-[100]"
         aria-label="Main navigation"
       >
-        <Link href="/" className="flex items-center pl-2 md:mr-10 whitespace-nowrap font-bold focus:outline-none" aria-label="Homepage">
-          <span className="block w-44 h-16 relative">
+        <Link href="/" className="flex items-start md:mr-10 whitespace-nowrap font-bold focus:outline-none pl-0" aria-label="Homepage">
+          <span className="block w-auto h-16 relative">
               <Image
                 src="/axiom-logo.png"
                 alt="Axiom Tech Labs"

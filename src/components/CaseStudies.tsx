@@ -120,9 +120,9 @@ import BookACall from "./BookACall";
 
 export default function CaseStudies() {
   return (
-    <section className="py-12 px-12 md:px-16 text-black">
+    <section className="py-12 px-6 md:px-16 text-black">
       <section className="py-12 bg-gray-50">
-        <div className="max-w-6xl mx-auto flex flex-col lg:flex-row items-center gap-8 px-4">
+        <div className="max-w-6xl mx-auto flex flex-col lg:flex-row items-center gap-4 px-4">
           <div className="flex-1 flex flex-col justify-center">
             <h2 className="text-3xl md:text-4xl font-medium mb-4">
               Who We Are Crafting Our Success
@@ -136,7 +136,7 @@ export default function CaseStudies() {
               {stats.map((s, i) => (
                 <motion.div
                   key={i}
-                  className="bg-white rounded-xl shadow-lg p-6 flex flex-col items-start border border-gray-100 hover:shadow-2xl transition-shadow duration-300 transform hover:scale-105"
+                  className="bg-white rounded-xl text-center justify-center shadow-lg p-2 md:p-6 flex flex-col items-center border border-gray-100 hover:shadow-2xl transition-shadow duration-300 transform hover:scale-105"
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}

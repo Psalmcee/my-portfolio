@@ -1,14 +1,14 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Inter, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const inter = Inter({
+  variable: "--font-inter",
   subsets: ["latin"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const jbMono = JetBrains_Mono({
+  variable: "--font-jb-mono",
   subsets: ["latin"],
 });
 
@@ -22,32 +22,28 @@ export const metadata: Metadata = {
     siteName: "Axiom Tech Labs",
     images: [
       {
-  // keep the existing OG image (do not tamper)
-  url: "/axiom-logo.png",
-  width: 1200,
-  height: 630,
+        // keep the existing OG image (do not tamper)
+        url: "/axiom-logo.png",
+        width: 1200,
+        height: 630,
         alt: "Axiom Tech Labs",
       },
     ],
     locale: "en-US",
     type: "website",
-  }
+  },
+  // Additional metadata enhancements for SEO and social previews
+  twitter: {
+    card: 'summary_large_image',
+    site: '@your_twitter_handle',
+    title: 'Axiom Tech Labs',
+    description: 'High Quality Web Development Services',
+    images: ['/axiom-logo.png'],
+  },
+  alternates: { canonical: 'https://axiomtechlabs.vercel.app' },
+  robots: { index: true, follow: true, nocache: false },
+  icons: { icon: '/favicon.ico' },
 };
-
-// Additional metadata enhancements for SEO and social previews
-metadata.twitter = {
-  card: 'summary_large_image',
-  site: '@your_twitter_handle',
-  title: 'Axiom Tech Labs',
-  description: 'High Quality Web Development Services',
-  images: ['/axiom-logo.png'],
-}; 
-
-metadata.alternates = { canonical: 'https://axiomtechlabs.vercel.app' };
-
-metadata.robots = { index: true, follow: true, nocache: false };
-
-metadata.icons = { icon: '/favicon.ico' };
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -56,7 +52,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${inter.variable} ${jbMono.variable} antialiased`}
       >
         {children}
         {/* JSON-LD for Organization, WebSite and Breadcrumbs */}
