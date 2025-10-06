@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     images: [
       {
         // keep the existing OG image (do not tamper)
-        url: "/axiom-logo.png",
+        url: "/axiom-og.png",
         width: 1200,
         height: 630,
         alt: "Axiom Tech Labs",
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     site: '@your_twitter_handle',
     title: 'Axiom Tech Labs',
     description: 'High Quality Web Development Services',
-    images: ['/axiom-logo.png'],
+    images: ['/axiom-og.png'],
   },
   alternates: { canonical: 'https://axiomtechlabs.vercel.app' },
   robots: { index: true, follow: true, nocache: false },
